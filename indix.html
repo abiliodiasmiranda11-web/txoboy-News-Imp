@@ -1,1 +1,94 @@
-indix.html
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Txoboy News - Notícias de Angola</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#f4f4f4;color:#111}
+header{background:#000;color:#fff;padding:15px 20px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10}
+.logo{font-size:26px;font-weight:900}.logo span{color:#ffcc00}
+nav a{color:#fff;text-decoration:none;margin-left:15px;font-weight:bold;font-size:14px}
+.hero{background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1200');background-size:cover;background-position:center;color:#fff;padding:60px 20px;text-align:center}
+.hero h1{font-size:38px;line-height:1.1}.hero p{margin:15px 0 20px;opacity:.9}
+.hero a{background:#ffcc00;color:#000;padding:12px 25px;border-radius:30px;text-decoration:none;font-weight:900;display:inline-block}
+.search{max-width:800px;margin:20px auto;padding:0 15px}.search input{width:100%;padding:14px;border-radius:30px;border:1px solid #ddd;outline:none;font-size:16px}
+.container{max-width:1100px;margin:auto;padding:20px 15px}
+h2{margin:20px 0 15px;font-size:24px;border-left:5px solid #ffcc00;padding-left:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.card{background:#fff;border-radius:15px;overflow:hidden;box-shadow:0 3px 10px rgba(0,0,0,.1)}
+.card img{width:100%;height:180px;object-fit:cover}
+.card-body{padding:15px}.tag{background:#ffcc00;padding:4px 10px;border-radius:20px;font-size:12px;font-weight:bold}
+.card-body h3{margin:10px 0;font-size:19px;line-height:1.3}
+.card-body p{color:#555;font-size:14px;line-height:1.5}
+.card-body small{color:#999}
+.btn{margin-top:12px;display:inline-block;background:#000;color:#fff;padding:9px 18px;border-radius:20px;text-decoration:none;font-size:13px}
+.live{background:#ff0000;color:#fff;padding:20px;border-radius:15px;margin-top:20px;display:flex;justify-content:space-between;align-items:center}
+.live b{font-size:20px}
+footer{background:#000;color:#fff;text-align:center;padding:30px 15px;margin-top:30px}
+footer a{color:#ffcc00;text-decoration:none}
+.whats{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:30px;text-decoration:none;box-shadow:0 5px 15px rgba(0,0,0,.3)}
+@media(max-width:600px){.hero h1{font-size:28px}nav{display:none}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">TXOBOY <span>NEWS</span></div>
+<nav><a href="#">Início</a><a href="#noticias">Notícias</a><a href="#desporto">Desporto</a><a href="#musica">Música</a><a href="#contacto">Contacto</a></nav>
+</header>
+
+<div class="hero">
+<h1>As notícias que Angola<br>está a falar agora!</h1>
+<p>Futebol, música, fofoca, cultura e muito mais. Direto de Luanda para o mundo.</p>
+<a href="#noticias">VER NOTÍCIAS AGORA ↓</a>
+</div>
+
+<div class="search"><input type="text" id="pesquisa" placeholder="🔍 Pesquisar notícia... ex: Petro, Davido, Luanda" onkeyup="pesquisar()"></div>
+
+<div class="container" id="noticias">
+<div class="live"><div><span>🔴 AO VIVO</span><br><b>Última Hora: Luanda em movimento!</b></div><div>21 Nov 2026</div></div>
+
+<h2 id="desporto">⚽ Desporto</h2>
+<div class="grid">
+<div class="card noticia"><img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=800"><div class="card-body"><span class="tag">DESPORTO</span><h3>Petro de Luanda vence e lidera o Girabola!</h3><p>Num jogo cheio de emoção no 11 de Novembro, o Petro garantiu mais 3 pontos e os adeptos foram à loucura.</p><small>Hoje • Txoboy News</small><br><a class="btn" href="#">Ler mais</a></div></div>
+<div class="card noticia"><img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=800"><div class="card-body"><span class="tag">DESPORTO</span><h3>Angola prepara-se para o CAN: convocatória sai esta semana</h3><p>Treinador promete equipa forte e com muitas surpresas. Será que vamos longe desta vez?</p><small>Hoje • Txoboy News</small><br><a class="btn" href="#">Ler mais</a></div></div>
+<div class="card noticia"><img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?w=800"><div class="card-body"><span class="tag">DESPORTO</span><h3>Basquetebol: 1º de Agosto imparável!</h3><p>Os militares continuam a dominar e já são favoritos ao título nacional.</p><small>Ontem • Txoboy News</small><br><a class="btn" href="#">Ler mais</a></div></div>
+</div>
+
+<h2 id="musica">🎵 Música & Fama</h2>
+<div class="grid">
+<div class="card noticia"><img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800"><div class="card-body"><span class="tag">MÚSICA</span><h3>Afro House de Angola está a dominar o mundo</h3><p>DJs angolanos estão a tocar em Portugal, Brasil e África do Sul. O kuduro evoluiu!</p><small>Hoje • Txoboy News</small><br><a class="btn" href="#">Ler mais</a></div></div>
+<div class="card noticia"><img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=800"><div class="card-body"><span class="tag">MÚSICA</span><h3>Top 5 músicas mais ouvidas em Luanda esta semana</h3><p>Descobre quem está no topo das playlists em Talatona, Viana e Cacuaco.</p><small>Hoje • Txoboy News</small><br><a class="btn" href="#">Ler mais</a></div></div>
+<div class="card noticia"><img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800"><div class="card-body"><span class="tag">FAMA</span><h3>Festa em Talatona junta famosos e influencers</h3><p>Vídeos viralizaram no TikTok e Instagram. Vê quem esteve lá!</p><small>Ontem • Txoboy News</small><br><a class="btn" href="#">Ler mais</a></div></div>
+</div>
+
+<h2>🇦🇴 Luanda & Angola</h2>
+<div class="grid">
+<div class="card noticia"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800"><div class="card-body"><span class="tag">LUANDA</span><h3>Ilha de Luanda: o lugar perfeito para o fim de semana</h3><p>Praia, boa comida e pôr do sol lindo. Guia completo do que fazer.</p><small>Hoje • Txoboy News</small><br><a class="btn" href="#">Ler mais</a></div></div>
+<div class="card noticia"><img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800"><div class="card-body"><span class="tag">ANGOLA</span><h3>Novos autocarros e estradas em Luanda: o que muda?</h3><p>Trânsito em Talatona e Kilamba vai melhorar? Veja o plano.</p><small>Hoje • Txoboy News</small><br><a class="btn" href="#">Ler mais</a></div></div>
+<div class="card noticia"><img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=800"><div class="card-body"><span class="tag">ECONOMIA</span><h3>Como ganhar dinheiro online em Angola em 2026</h3><p>5 ideias reais que jovens em Luanda já estão a usar.</p><small>Hoje • Txoboy News</small><br><a class="btn" href="#">Ler mais</a></div></div>
+</div>
+</div>
+
+<footer id="contacto">
+<h2 style="border:none">TXOBOY NEWS</h2>
+<p>Feito em Luanda, Angola 🇦🇴</p><br>
+<p>Segue: <a href="#">Instagram</a> • <a href="#">TikTok</a> • <a href="#">Facebook</a> • <a href="#">WhatsApp</a></p><br>
+<p>© 2026 Txoboy News - Todos os direitos reservados</p>
+</footer>
+
+<a class="whats" href="https://wa.me/244900000000">💬</a>
+
+<script>
+function pesquisar(){
+let v=document.getElementById('pesquisa').value.toLowerCase();
+document.querySelectorAll('.noticia').forEach(c=>{
+c.style.display=c.innerText.toLowerCase().includes(v)?'block':'none';
+});
+}
+</script>
+</body>
+</html>
